@@ -1,2 +1,2 @@
 # OGC.MOBI
-OGC for SW engineer relax
+For all coders, coding is fucking hard, life is short, OGC more!
