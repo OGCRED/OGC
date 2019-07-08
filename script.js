@@ -74,7 +74,7 @@ function retry(){
     }
 }
 
-funciont fetch(filename){
+function fetch(filename){
     var a = document.createElement('a');
     a.href = filename;
     a.download = filename;
