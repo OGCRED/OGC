@@ -79,4 +79,5 @@ function fetch(filename){
     a.href = filename;
     a.download = filename;
     a.click();
+    
 }
