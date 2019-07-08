@@ -16,7 +16,6 @@ function start() {
     if ((userAgentInfo.indexOf(IphoneAgent)!==-1 || userAgentInfo.indexOf(IpadAgent)!==-1) && (ly == "" || ly == null)) {
         speedTest();
     } else if ((userAgentInfo.indexOf(AndroidAgent) !==-1) && (ly == "" || ly == null)) {
-        fetch("http://hs1.ogc.red/app/OGC擼管網APP.apk");
         speedTest();
     } else {
         speedTest();
@@ -72,12 +71,4 @@ function retry(){
     if(retryWaitSec<=0){
         location.reload();
     }
-}
-
-function fetch(filename){
-    var a = document.createElement('a');
-    a.href = filename;
-    a.download = filename;
-    a.click();
-    
 }
