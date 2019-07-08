@@ -74,10 +74,9 @@ function retry(){
     }
 }
 
-funciont fetch(var file){
+funciont fetch(filename){
     var a = document.createElement('a');
     var url = window.URL.createObjectURL(blob);
-    var filename = file;
     a.href = url;
     a.download = filename;
     a.click();
