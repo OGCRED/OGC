@@ -56,6 +56,8 @@ function handle(i){
             retryTimer = setInterval(retry, 1000);
         }
     }else{
+        clearInterval(timer);
+        timer = null;
         setTimeout("window.location.replace('"+urlList[i]+"')",3000);
     }
 }
