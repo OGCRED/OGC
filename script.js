@@ -48,7 +48,7 @@ function handle(i){
         return;
     }
 
-    if(ping>30){
+    if(ping>20){
         clearInterval(timer);
         timer = null;
         if(!retryTimer){
