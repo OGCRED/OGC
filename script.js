@@ -48,7 +48,7 @@ function handle(i){
         return;
     }
 
-    if(ping>20){
+    if(ping>30){
         clearInterval(timer);
         timer = null;
         if(!retryTimer){
@@ -56,7 +56,7 @@ function handle(i){
             retryTimer = setInterval(retry, 1000);
         }
     }else{
-        this.location.href= urlList[i];
+        setTimerOut(window.location.replace(urlList[i]),3000);
     }
 }
 
