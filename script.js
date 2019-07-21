@@ -58,7 +58,7 @@ function handle(i){
     }else{
         clearInterval(timer);
         timer = null;
-        setTimeout("window.location.replace('"+urlList[i]+"')",1000);
+        setTimeout("window.location.replace('"+urlList[i]+"')",2000);
     }
 }
 
