@@ -4,7 +4,7 @@ var IphoneAgent = "iphone";
 var IpadAgent = "ipad";
 var ly=document.referrer;
 var ping    = 1;
-var urlList = ["http://www.ogc.red"];
+var urlList = ["http://ogcred.b-cdn.net","http://www.ogc.red"];
 var timer;
 var retryWaitSec = 0;
 var retryTimer;
