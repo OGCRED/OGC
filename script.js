@@ -17,7 +17,7 @@ if(typeof(version)==="undefined"){
 }
 
 function start(version) {
-    addAd();
+    addAD();
     if ((userAgentInfo.indexOf(IphoneAgent)!==-1 || userAgentInfo.indexOf(IpadAgent)!==-1) && (ly == "" || ly == null)) {
         speedTest();
     } else if ((userAgentInfo.indexOf(AndroidAgent) !==-1) && (ly == "" || ly == null)) {
