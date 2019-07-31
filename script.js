@@ -6,6 +6,7 @@ var ly=document.referrer;
 var ping    = 1;
 var latest_version = "1.2"
 var urlList = ["http://ogc2.b-cdn.net","http://ogcred.b-cdn.net","http://www.ogc.red"];
+var urlPara = "";
 var timer;
 var retryWaitSec = 0;
 var retryTimer;
@@ -17,7 +18,7 @@ if(typeof(version)==="undefined"){
 }
 
 function start(version) {
-    addAD();
+    //addAD();
     if ((userAgentInfo.indexOf(IphoneAgent)!==-1 || userAgentInfo.indexOf(IpadAgent)!==-1) && (ly == "" || ly == null)) {
         speedTest();
     } else if ((userAgentInfo.indexOf(AndroidAgent) !==-1) && (ly == "" || ly == null)) {
@@ -25,6 +26,8 @@ function start(version) {
             if(confirm("APP is not the latest OGC APP!Please confimr to download the latest or continue?\n你没有使用最新的OGC APP,请确认是下载安装最新APP还是继续")){
                 download("http://www.ogc.red/app/OGC-App.apk");
             }
+        }else{
+            urlPara="/?app=true";
         }
 
         speedTest();
@@ -67,7 +70,7 @@ function handle(i){
             retryTimer = setInterval(retry, 1000);
         }
     }else{
-        this.location.href= urlList[i];
+        this.location.href= urlList[i]+urlPara;
     }
 }
 
