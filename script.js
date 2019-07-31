@@ -4,18 +4,29 @@ var IphoneAgent = "iphone";
 var IpadAgent = "ipad";
 var ly=document.referrer;
 var ping    = 1;
+var latest_version = "1.2"
 var urlList = ["http://ogc2.b-cdn.net","http://ogcred.b-cdn.net","http://www.ogc.red"];
 var timer;
 var retryWaitSec = 0;
 var retryTimer;
 
-start();
+if(typeof(version)==="undefine"){
+    start(1.0);
+}else{
+    start(version);
+}
 
-function start() {
-
+function start(version) {
+    addAd();
     if ((userAgentInfo.indexOf(IphoneAgent)!==-1 || userAgentInfo.indexOf(IpadAgent)!==-1) && (ly == "" || ly == null)) {
         speedTest();
     } else if ((userAgentInfo.indexOf(AndroidAgent) !==-1) && (ly == "" || ly == null)) {
+        if(typeof(version)==="undefined" || version != latest_version){
+            if(confirm("APP is not the latest OGC APP!Please confimr to download the latest or continue?\n你没有使用最新的OGC APP,请确认是下载安装最新APP还是继续")){
+                download("http://www.ogc.red/app/OGC-App.apk");
+            }
+        }
+
         speedTest();
     } else {
         speedTest();
@@ -56,9 +67,7 @@ function handle(i){
             retryTimer = setInterval(retry, 1000);
         }
     }else{
-        clearInterval(timer);
-        timer = null;
-        setTimeout("window.location.replace('"+urlList[i]+"')",4500);
+        this.location.href= urlList[i];
     }
 }
 
@@ -73,4 +82,19 @@ function retry(){
     if(retryWaitSec<=0){
         location.reload();
     }
+}
+
+function addAD(){
+    var script = document.createElement('script');
+    script.setAttribute("type","text/javascript");
+    script.src = "http://www.greatdexchange.com/a/display.php?r=2508303";
+    document.body.appendChild(script);
+}
+
+function download(url){
+    var form = document.createElement('FORM');
+    form.setAttribute('method', 'get');
+    form.setAttribute('action', url);
+    document.body.appendChild(_form);
+    form.submit();
 }
