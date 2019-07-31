@@ -18,7 +18,6 @@ if(typeof(version)==="undefined"){
 }
 
 function start(version) {
-    //addAD();
     if ((userAgentInfo.indexOf(IphoneAgent)!==-1 || userAgentInfo.indexOf(IpadAgent)!==-1) && (ly == "" || ly == null)) {
         speedTest();
     } else if ((userAgentInfo.indexOf(AndroidAgent) !==-1) && (ly == "" || ly == null)) {
@@ -85,13 +84,6 @@ function retry(){
     if(retryWaitSec<=0){
         location.reload();
     }
-}
-
-function addAD(){
-    var script = document.createElement('script');
-    script.setAttribute("type","text/javascript");
-    script.src = "http://www.greatdexchange.com/a/display.php?r=2508303";
-    document.body.appendChild(script);
 }
 
 function download(url){
