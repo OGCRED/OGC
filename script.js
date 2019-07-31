@@ -10,7 +10,7 @@ var timer;
 var retryWaitSec = 0;
 var retryTimer;
 
-if(typeof(version)==="undefine"){
+if(typeof(version)==="undefined"){
     start(1.0);
 }else{
     start(version);
