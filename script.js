@@ -69,7 +69,7 @@ function handle(i){
             retryTimer = setInterval(retry, 1000);
         }
     }else{
-        this.location.href= urlList[i]+urlPara;
+        window.location.replace(urlList[i]+urlPara);
     }
 }
 
