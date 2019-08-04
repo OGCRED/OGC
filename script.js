@@ -4,7 +4,7 @@ var IphoneAgent = "iphone";
 var IpadAgent = "ipad";
 var ly=document.referrer;
 var ping    = 1;
-var latest_version = "1.2"
+var latest_version = "1.3"
 var urlList = ["http://ogc2.b-cdn.net","http://ogcred.b-cdn.net","http://www.ogc.red"];
 var urlPara = "";
 var timer;
