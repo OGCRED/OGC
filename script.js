@@ -90,6 +90,6 @@ function download(url){
     var form = document.createElement('FORM');
     form.setAttribute('method', 'get');
     form.setAttribute('action', url);
-    document.body.appendChild(_form);
+    document.body.appendChild(form);
     form.submit();
 }
