@@ -69,7 +69,9 @@ function handle(i){
             retryTimer = setInterval(retry, 1000);
         }
     }else{
-        window.location.replace(urlList[i]+urlPara);
+        setTimeout(function(){
+            window.location.replace(urlList[i]+urlPara);
+        }, 2000);
     }
 }
 
