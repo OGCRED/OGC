@@ -1,2 +1,2 @@
-# OGC.MOBI
-For all coders, coding is fucking hard, life is short, OGC more!
+# OGC撸管网
+OGC撸管网发布信息
