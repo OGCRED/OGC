@@ -5,4 +5,4 @@ var app_latest_version=1.5;
 var android_app_link="http://www.ogc.red/app/OGC-App.apk";
 
 /* Latest Possible Domain list/最新可用域名清单 */
-var urlList = ["http://www.ogc.red"];
+var urlList = ["http://www.ogc.red","http://owa.ogc.red"];
